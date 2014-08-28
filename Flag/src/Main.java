@@ -3,8 +3,7 @@
  * 8/21/14
  * Period 6
  * 
- * f IS A FLAGGGGGGGGggGgGgGGGg!!!!11!1!1!one111!!eleven11one!!!!!onehundredone!!111!!1!!11!!
- * f is a fully scalable and resizable American flag with accurate dimensions and colors. 
+ * THIS IS A FLAGGGGGGGGggGgGgGGGg!!!!11!1!1!one111!!eleven11one!!!!!onehundredone!!111!!1!!11!!
  */
 
 import java.awt.Color;
