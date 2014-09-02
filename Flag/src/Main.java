@@ -13,7 +13,6 @@
  * of the flag based on the size on the window. All constants are derived from the height of the flag, so this
  * step defines all the dimensions correctly. Then, the paint() method calls all the encapsulated methods that
  * draws the stripes, the union, and the stars(drawStripes() and drawUnion() (which calls drawSter()).
- * 
  */
 
 import java.awt.Color;
