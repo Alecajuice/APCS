@@ -17,6 +17,7 @@ public class FlagPanel extends JPanel
 	//height of flag
 	public int height;
 	
+	//Constant ratios for flag dimensions
 	private final double HEIGHT_WIDTH_RATIO = 1.9;
 	private final double UNION_WIDTH_RATIO = 0.76;
 	private final double UNION_HEIGHT_RATIO = 0.5385;
@@ -26,6 +27,7 @@ public class FlagPanel extends JPanel
 	private final double STAR_INNER_RADIUS_RATIO = 0.39;
 	private final double STRIPE_WIDTH_RATIO = 0.0769;
 	
+	//Constructor for JPanel
 	public FlagPanel()
 	{
 		super();
@@ -35,7 +37,7 @@ public class FlagPanel extends JPanel
 	}
 	
 	//Set height so that flag is resized with the window
-	public void setHeight()
+	public void setFlagHeight()
 	{
 		if(this.getHeight() * HEIGHT_WIDTH_RATIO <= this.getWidth())
 		{
@@ -48,9 +50,10 @@ public class FlagPanel extends JPanel
 	}
 	
 	@Override
+	//Sets height then paints flag on JPanel
 	public void paint(Graphics g)
 	{
-		setHeight();
+		setFlagHeight();
 		drawStripes(g);
 		drawUnion(g);
 	}
