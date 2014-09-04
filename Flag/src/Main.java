@@ -6,7 +6,7 @@
  * THIS IS A FLAGGGGGGGGggGgGgGGGg!!!!11!1!1!one111!!eleven11one!!!!!onehundredone!!111!!1!!11!!
  * 
  * This is a fully resizable, scalable American flag that follows the exact ratios and colors of the actual American flag.
- * To scale the flag, resize the window and based on the size of the window, the flag will scale.
+ * To scale the flag, run the code and resize the window and based on the size of the window, the flag will scale.
  * The Main class creates a JFrame and adds a FlagPanel (extends JPanel) to it. The FlagPanel class
  * contains the flag and all the methods, constants, and math to draw the flag. The flag is drawn on the
  * FlagPanel using its paint() method. The paint() method calls the setFlagHeight() method, which sets the height
