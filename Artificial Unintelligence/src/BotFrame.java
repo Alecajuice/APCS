@@ -15,38 +15,60 @@ import javax.swing.JTextField;
 
 public class BotFrame extends JFrame
 {
-
+	JPanel frameContent;
 	JPanel history;
+	JScrollPane scrollPane;
+	JPanel inputPanel;
 	JTextField input;
 	
 	public BotFrame()
 	{
-		JPanel frameContent = new JPanel();
+		super();
+		this.setSize(1000, 1000);
+		frameContent = new JPanel(null);
+		frameContent.setSize(1000, 1000);
 		this.add(frameContent);
 		history = new JPanel();
 		history.setLayout(new GridLayout(1000, 1));
-		JPanel inputPanel = new JPanel(null);
+		inputPanel = new JPanel(null);
 		input = new JTextField();
-		input.setBounds(0, 0, 5000, 20);
+		input.setBounds(0, 0, frameContent.getWidth(), 20);
 		inputPanel.add(input);
-		JScrollPane scrollPane = new JScrollPane(history);
+		scrollPane = new JScrollPane(history);
 		scrollPane.setPreferredSize(new Dimension(300, 250));
         scrollPane.setViewportBorder(BorderFactory.createLineBorder(Color.black));
-        frameContent.setLayout(new BoxLayout(frameContent, BoxLayout.Y_AXIS));
-        frameContent.add(scrollPane);
-		frameContent.add(inputPanel);
+        frameContent.setLayout(new BorderLayout());
+        frameContent.add(scrollPane, BorderLayout.NORTH);
+		frameContent.add(inputPanel, BorderLayout.CENTER);
 		for(int i = 0; i < 1000; i++)
 		history.add(new JLabel("hi"));
 		scrollPane.getVerticalScrollBar().setValue(scrollPane.getVerticalScrollBar().getMaximum());
 		initFrame();
+		mainLoop();
 	}
 	
 	private void initFrame()
 	{
-		this.setSize(500, 500);
 //		this.setBackground(Color.WHITE);
 		this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
 		this.setVisible(true);
-		this.pack();
+//		this.pack();
+	}
+	
+	public void mainLoop()
+	{
+		while(true)
+		{
+			resize();
+			this.validate();
+		}
+	}
+	
+	public void resize()
+	{
+		inputPanel.setSize(frameContent.getWidth(), 20);
+//		inputPanel.setBounds(0, frameContent.getHeight() - 20, frameContent.getWidth(), 20);
+//		scrollPane.setBounds(0, 0, frameContent.getWidth(), frameContent.getHeight() - 20);
+		System.out.println(frameContent.getHeight() + ", " + frameContent.getWidth());
 	}
 }
